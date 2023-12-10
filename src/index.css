@@ -1,0 +1,26 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+*{
+    margin: 0;
+    box-sizing: border-box;                            
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  button{
+    outline: 0;
+    border: 0;
+  }
+  :root{
+    --head-font: Clash Display;
+    --minor-font: 'Satoshi', sans-serif;
+  }
+  body{
+    background: #010101;
+  }
+  html,body{
+    width: 100%;
+  }
+  img{
+    object-fit: cover;
+  }
