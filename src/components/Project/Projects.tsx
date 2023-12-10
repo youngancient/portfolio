@@ -1,6 +1,7 @@
 import { HeadText, NormalText } from "../../styles/Hero/style";
 import { ProjectStyle, ProjectsStyle } from "../../styles/Project/style";
 import { ArrowRight } from "../Icons/Icons";
+import { ProjectList } from "./data";
 
 export interface IProject {
   name: string;
@@ -16,7 +17,18 @@ export const Projects = () => {
         <NormalText>MY WORKS FROM THE GARDEN OF EDEN</NormalText>
         <HeadText>From the Garden</HeadText>
       </div>
-      <div className="project-list">projects</div>
+      <div className="project-list">
+        {ProjectList.map((ele, index) => (
+          <Project
+            key={index}
+            name={ele.name}
+            href={ele.href}
+            img={ele.img}
+            role={ele.role}
+            shortDesc={ele.shortDesc}
+          />
+        ))}
+      </div>
     </ProjectsStyle>
   );
 };
@@ -37,15 +49,17 @@ export const Project: React.FC<IProject> = ({
           <span>{shortDesc}</span>
         </div>
         <a href={href}>
-          <button type="button">
+          <button type="button" className="btn">
             <p>Visit Site</p>
             <ArrowRight />
           </button>
         </a>
       </div>
-      <div className="second">
-        <img src={img} alt={name} />
-      </div>
+      <a href={href}>
+        <div className="second">
+          <img src={img} alt={name} />
+        </div>
+      </a>
     </ProjectStyle>
   );
 };

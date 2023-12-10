@@ -157,14 +157,15 @@ export const HeadText = styled.h1`
   -webkit-text-fill-color: transparent;
   @media (max-width: 998px) {
     font-size: 6rem;
+    line-height: 5.21875rem;
   }
   @media (max-width: 767px) {
     font-size: 5rem;
-    line-height: 5.21875rem;
+    line-height: 4.21875rem;
   }
   @media (max-width: 500px) {
     font-size: 3.375rem;
-    line-height: 4.21875rem;
+    line-height: 3.21875rem;
   }
   @media (min-width: 998px) {
     font-size: 8rem;

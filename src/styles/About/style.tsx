@@ -44,10 +44,12 @@ export const AboutStyles = styled.div`
     }
     .picture img {
       width: 100%;
+      border-radius: 0rem 0rem 0.625rem 0.625rem;
     }
     .text {
       padding: 1.69rem 0.72rem;
       padding-bottom: 2rem;
+      border-radius: 0.625rem 0.625rem 0rem 0rem;
     }
     h1 {
       padding-left: 1rem;
@@ -106,8 +108,21 @@ export const SkillcompStyle = styled.div`
     column-gap: 1.5rem;
     row-gap: 2rem;
   }
+  @media (max-width: 360px) {
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(80px, 100%), 1fr));
+      column-gap: 1.5rem;
+      row-gap: 2.25rem;
+    }
+    .make{
+      font-size: 0.85rem;
+      // line-height: 1.5rem; 
+    }
+  }
   @media (max-width: 767px) {
     padding: 1.5rem;
+    padding-bottom: 3rem;
   }
   @media (min-width: 767px) {
     padding: 3.5625rem 12.875rem 5.625rem 9.1875rem;
