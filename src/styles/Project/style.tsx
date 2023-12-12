@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ProjectsStyle = styled.div`
   margin-top: 8rem;
-  border: 2px solid #fff;
   .head {
     p {
       font-weight: 700;

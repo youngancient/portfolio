@@ -3,7 +3,7 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  ResumeOpenIcon,
+  OpenIcon,
   XIcon,
 } from "../Icons/Icons";
 
@@ -37,7 +37,7 @@ export const Header = () => {
           <p>About Me</p>
         </a>
         <a href="#" className="resume">
-          <p>Resume</p> <ResumeOpenIcon />
+          <p>Resume</p> <OpenIcon />
         </a>
       </div>
     </HeaderStyle>

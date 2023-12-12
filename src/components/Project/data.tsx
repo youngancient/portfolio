@@ -9,6 +9,13 @@ export const ProjectList: IProject[] = [
     shortDesc: "Worked on User and Admin dashboards used by 500+ teams",
   },
   {
+    name: "GetlinkedAI",
+    href: "#",
+    img: "/assets/getlinked.png",
+    role: "Front-End Developer",
+    shortDesc: "A Webapp built during a 3 day UI challenge",
+  },
+  {
     name: "Residease",
     href: "#",
     img: "/assets/residease.png",
@@ -22,11 +29,5 @@ export const ProjectList: IProject[] = [
     role: "Front-End Developer",
     shortDesc: "A MedicalAdherence App built for a hackathon",
   },
-  {
-    name: "GetlinkedAI",
-    href: "#",
-    img: "/assets/getlinked.png",
-    role: "Front-End Developer",
-    shortDesc: "A Webapp built during a 3 day UI challenge",
-  },
+  
 ];
