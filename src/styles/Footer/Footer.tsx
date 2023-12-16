@@ -77,6 +77,9 @@ export const FooterStyles = styled.footer`
       margin-top: 2rem;
       padding: 0rem 4.125rem 0rem 4.125rem;
     }
+    .copyryt {
+      padding-bottom: 3rem;
+    }
     .copyryt p {
       text-align: center;
     }

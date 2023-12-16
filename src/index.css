@@ -18,9 +18,11 @@
   }
   body{
     background: #010101;
+    border: 2px solid #fff;
   }
   html,body{
     width: 100%;
+    overflow-x: hidden;
   }
   img{
     object-fit: cover;
