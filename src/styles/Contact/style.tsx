@@ -101,11 +101,11 @@ export const ContactStyle = styled.div`
   @media (max-width: 998px) {
     margin-top: 4rem;
     .marq-two {
-      margin-top: 49.5%;
+      margin-top: 55%;
       transform: rotate(-4.492deg);
     }
     .marq-one {
-      margin-top: 5%;
+      margin-top: 10%;
       transform: rotate(-4.492deg);
     }
     .inner {

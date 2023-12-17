@@ -20,7 +20,7 @@ export const ProjectsStyle = styled.div`
   @media (max-width: 767px) {
     padding: 1.5rem;
     .project-list {
-        gap: 2.5rem;
+      gap: 2.5rem;
     }
   }
   @media (min-width: 767px) {
@@ -29,18 +29,18 @@ export const ProjectsStyle = styled.div`
       padding-left: 5rem;
     }
     .project-list {
-        gap: 4rem;
+      gap: 4rem;
     }
   }
 `;
 
 export const ProjectStyle = styled.div`
-    border-radius: 1.25rem;
-    border: 1px solid #FFF;
+  border-radius: 1.25rem;
+  border: 1px solid #fff;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  .first{
+  .first {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,7 +73,7 @@ export const ProjectStyle = styled.div`
     line-height: 1.5rem; /* 350% */
     text-transform: capitalize;
   }
-  .one p{
+  .one p {
     margin-top: 0.75rem;
   }
   .one span {
@@ -105,10 +105,12 @@ export const ProjectStyle = styled.div`
   }
   @media (max-width: 998px) {
     .btn {
-        width: 10.375rem;
-        height: 3.375rem;
-      }
+      width: 10.375rem;
+      height: 3.375rem;
+    }
+    padding: 2.81rem 2.89rem 1.75rem 3.19rem;
   }
+
   @media (max-width: 500px) {
     padding: 0.69rem 0.94rem 0.94rem 0.94rem;
     .second img {
@@ -130,6 +132,7 @@ export const ProjectStyle = styled.div`
       font-size: 0.8125rem;
     }
   }
+  
   @media (min-width: 998px) {
     padding: 2.81rem 2.89rem 1.75rem 3.19rem;
     .btn {
