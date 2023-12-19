@@ -166,7 +166,7 @@ export const Asterik = () => {
           y2="39.085"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
+          <stop stopColor="white" />
           <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
@@ -197,7 +197,7 @@ export const MobileAsterik = () => {
           y2="38.2876"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
+          <stop stopColor="white" />
           <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>

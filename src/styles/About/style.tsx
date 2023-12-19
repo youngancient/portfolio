@@ -106,14 +106,14 @@ export const SkillcompStyle = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(90px, 100%), 1fr));
     column-gap: 1.5rem;
-    row-gap: 2rem;
+    row-gap: 2.75rem;
   }
   @media (max-width: 360px) {
     .icons {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(min(80px, 100%), 1fr));
-      column-gap: 1.5rem;
-      row-gap: 2.25rem;
+      column-gap: 2rem;
+      row-gap: 2.85rem;
     }
     .make{
       font-size: 0.85rem;
@@ -127,8 +127,8 @@ export const SkillcompStyle = styled.div`
   @media (min-width: 767px) {
     padding: 3.5625rem 12.875rem 5.625rem 9.1875rem;
     .icons{
-        column-gap: 2rem;
-        row-gap: 2rem;
+        column-gap: 2.5rem;
+        row-gap: 2.5rem;
     }
   }
 `;
@@ -147,6 +147,7 @@ interface ISkillStyle {
 }
 export const SkillStyle = styled.div<ISkillStyle>`
 cursor: pointer;
+position: relative;
   p {
     color: #fff;
     background: ${(props) => props.color};
@@ -156,5 +157,12 @@ cursor: pointer;
     font-family: var(--minor-font);
     position: absolute;
     min-width: 80px;
+    left: 0;
+    right: 0;
+  }
+  @media (max-width: 360px) {
+    p{
+      padding: 0.3125rem 0.25rem 0.4375rem 0.25rem;
+    }
   }
 `;
