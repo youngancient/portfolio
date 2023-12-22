@@ -19,7 +19,12 @@ export const HeroStyles = styled.div`
   .mini {
     scale: 0.8;
   }
-  h1 {
+  .words{
+    display: flex,
+  flex-direction: row,
+  overflow: hidden
+  }
+  h1, .words {
     color: rgba(255, 255, 255, 0);
     text-align: center;
     font-family: var(--head-font);
@@ -55,6 +60,17 @@ export const HeroStyles = styled.div`
     position: absolute;
     bottom: 0;
     margin-left: -0.45rem;
+  }
+  .arr{
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .circle{
+    position: absolute;
+    left: 0;
+    top: 0;
   }
   @media (min-width: 600px) {
     .mobile-img {
@@ -170,7 +186,6 @@ export const HeadText = styled.h1`
   @media (min-width: 998px) {
     font-size: 8rem;
   }
-
 `;
 
 export const NormalText = styled.p`
@@ -184,6 +199,6 @@ export const NormalText = styled.p`
   text-transform: capitalize;
   @media (max-width: 500px) {
     font-size: 1rem;
-    line-height: 2rem; 
+    line-height: 2rem;
   }
 `;
