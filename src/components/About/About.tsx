@@ -6,10 +6,10 @@ import { Skills } from "./Skills";
 
 export const About = () => {
   return (
-    <AboutStyles>
+    <AboutStyles id="about">
       <div className="first">
         <Line className="line1" />
-        <HeadText>About Me</HeadText>
+        <HeadText>About Me</HeadText> 
         <Line className="line2" />
       </div>
       <div className="second">
@@ -39,7 +39,7 @@ export const About = () => {
 
 export const SkillsComp =()=>{
     return(
-        <SkillcompStyle>
+        <SkillcompStyle id="tools">
             <NormalText className="make">MAKING THE IMPOSSIBILITIES POSSIBLE WITH</NormalText>
         <div className="icons">
           {Skills.map((ele, index) => (

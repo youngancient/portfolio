@@ -38,18 +38,18 @@ export const Hero = () => {
         repeat: -1,
         yoyo: true,
       });
-      gsap.from(emoji.current,{
+      gsap.from(emoji.current, {
         scrollTrigger: {
           trigger: emoji.current,
-          toggleActions : "restart none none none"
+          toggleActions: "restart none none none",
         },
-        x : 300,
+        x: 300,
         duration: 2,
         rotateZ: 360,
         ease: "back",
       });
     },
-    { scope: container } 
+    { scope: container }
   );
   return (
     <HeroStyles ref={container}>
@@ -99,9 +99,11 @@ export const Hero = () => {
           </div>
           <div className="direct">
             <img src="/assets/subtract.svg" alt="" className="vshape" />
-            <div className="arr">
-              <Arrowdown />
-            </div>
+            <a href="#tools" className="">
+              <div className="arr">
+                <Arrowdown />
+              </div>
+            </a>
             <NormalText>See How I Tell Them Below</NormalText>
           </div>
         </div>

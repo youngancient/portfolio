@@ -7,20 +7,26 @@ import {
   XIcon,
 } from "../Icons/Icons";
 
+export const resumeLink:string = "https://drive.google.com/file/d/1ek3UOnGgB6JoXbar1JbuhkV03qCOhloD/view?usp=sharing";
+export const linkedinLink:string = "https://www.linkedin.com/in/jude-tochy-922492227/";
+export const xLink:string = "https://twitter.com/judetochyx";
+export const githubLink:string = "https://github.com/youngancient";
+
 export const Header = () => {
   return (
     <HeaderStyle>
       <div className="for-desktop">
-        <a href="#">
+        <a href={githubLink}>
+          {/* change this to github icons */}
           <Facebook />
         </a>
-        <a href="#">
+        <a href={xLink} target="_blank">
           <XIcon />
         </a>
-        <a href="#">
+        <a href="#" target="_blank">
           <Instagram />
         </a>
-        <a href="#">
+        <a href={linkedinLink} target="_blank">
           <Linkedin />
         </a>
       </div>
@@ -33,10 +39,10 @@ export const Header = () => {
         </div>
       </div>
       <div className="other-links">
-        <a href="#">
+        <a href="#about">
           <p>About Me</p>
         </a>
-        <a href="#" className="resume">
+        <a href={resumeLink} target="_blank" className="resume">
           <p>Resume</p> <OpenIcon />
         </a>
       </div>
