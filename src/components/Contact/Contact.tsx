@@ -14,6 +14,14 @@ export const MarqueeText: React.FC<IText> = ({ text }) => {
   );
 };
 export const Contact = () => {
+  const callPhone = () => {
+    const phoneNo: string = "+2348149756765";
+    window.location.href = "tel" + phoneNo;
+  };
+  const sendMail = () => {
+    const emailAddress: string = "judetochyokoye@gmail.com";
+    window.location.href = "mailto:" + emailAddress;
+  };
   return (
     <ContactStyle>
       <div className="slant-div">
@@ -42,15 +50,18 @@ export const Contact = () => {
             </div>
             <h4>Project Dreams? Let's Make Them Real</h4>
             <p>
-              Dreaming of a project? I turn dreams into reality. I bring aspirations to life.
+              Dreaming of a project? I turn dreams into reality. I bring
+              aspirations to life.
             </p>
           </div>
           <div className="two">
-            <button type="button">Contact Me</button>
-            <a href="#" className="link">
+            <button type="button" onClick={callPhone} className="phone">
+              Contact Me
+            </button>
+            <button type="button" className="link" onClick={sendMail}>
               <NormalText>Send A Mail</NormalText>
               <DarkOpenIcon />
-            </a>
+            </button>
           </div>
         </div>
       </div>

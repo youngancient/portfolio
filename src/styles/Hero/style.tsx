@@ -62,11 +62,10 @@ export const HeroStyles = styled.div`
     margin-left: -0.45rem;
   }
   .arr{
-    border: 2px solid #fff;
-    border-radius: 50%;
     cursor: pointer;
     z-index: 5;
   }
+  
   .circle{
     position: absolute;
     left: 0;

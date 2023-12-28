@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 export const Facebook = () => {
   return (
     <svg
@@ -145,6 +147,7 @@ export const ArrowRight = () => {
 
 export const Asterik = () => {
   return (
+    <AsterikStyle>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="30"
@@ -171,36 +174,17 @@ export const Asterik = () => {
         </linearGradient>
       </defs>
     </svg>
+    </AsterikStyle>
   );
 };
 
-export const MobileAsterik = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="29"
-      viewBox="0 0 30 29"
-      fill="none"
-    >
-      <path
-        d="M12.4568 0.0337505L9.34433 0.867723L12.0971 11.1412L2.63166 5.6763L1.03852 8.43569L10.504 13.9006L0.230516 16.6533L1.06449 19.7658L11.3355 17.0137L5.86809 26.4834L8.62903 28.0775L14.0973 18.6061L16.8501 28.8796L19.9625 28.0456L17.2098 17.7722L26.6817 23.2408L28.2748 20.4814L18.8029 15.0128L29.0763 12.26L28.2424 9.14758L17.9689 11.9004L23.4335 2.43542L20.6725 0.841391L15.2089 10.3047L12.4568 0.0337505Z"
-        fill="url(#paint0_linear_7_1934)"
-        fillOpacity="0.78"
-      />
-      <defs>
-        <linearGradient
-          id="paint0_linear_7_1934"
-          x1="10.9005"
-          y1="0.450737"
-          x2="21.0389"
-          y2="38.2876"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="white" />
-          <stop offset="1" stopColor="white" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-};
+export const AsterikStyle = styled.div`
+  @media (max-width: 767px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg{
+      scale: 0.6;
+    }
+  }
+`

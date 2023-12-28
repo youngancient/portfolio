@@ -77,7 +77,7 @@ export const ProjectStyle = styled.div`
     margin-top: 0.75rem;
   }
   .one span {
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
     color: rgba(255, 255, 255, 0.7);
   }
   a {
@@ -109,6 +109,9 @@ export const ProjectStyle = styled.div`
       height: 3.375rem;
     }
     padding: 2.81rem 2.89rem 1.75rem 3.19rem;
+    .one p{
+      margin-bottom: 0.25rem;
+    }
   }
 
   @media (max-width: 500px) {
@@ -121,8 +124,11 @@ export const ProjectStyle = styled.div`
     }
     .one p,
     .one span {
-      font-size: 0.8125rem;
+      font-size: 1rem;
       line-height: 1.125rem;
+    }
+    .one span{
+      margin-top: 0.5rem;
     }
     .btn {
       width: 7.5625rem;

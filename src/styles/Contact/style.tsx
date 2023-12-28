@@ -57,7 +57,7 @@ export const ContactStyle = styled.div`
       }
     }
   }
-  .two button {
+  .two .phone {
     border-radius: 0.625rem;
     background: #1f2124;
     color: #fff;
@@ -97,6 +97,9 @@ export const ContactStyle = styled.div`
   }
   .two {
     margin-top: 2rem;
+  }
+  .link{
+    background: transparent;
   }
   @media (max-width: 998px) {
     margin-top: 4rem;
@@ -153,7 +156,7 @@ export const ContactStyle = styled.div`
       transform: rotate(-12deg);
       width: 100%;
     }
-    .two button {
+    .two .phone {
       font-size: 1.25rem;
     }
     .inner {

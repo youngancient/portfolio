@@ -14,8 +14,8 @@ export const Projects = () => {
   return (
     <ProjectsStyle>
       <div className="head">
-        <NormalText>MY WORKS FROM THE GARDEN OF EDEN</NormalText>
-        <HeadText>From the Garden</HeadText>
+        <NormalText>MY WORKS</NormalText>
+        <HeadText>From the Kitchen</HeadText>
       </div>
       <div className="project-list">
         {ProjectList.map((ele, index) => (

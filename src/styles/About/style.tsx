@@ -53,6 +53,10 @@ export const AboutStyles = styled.div`
     h1 {
       padding-left: 1rem;
     }
+    .line1,
+    .line2 {
+      display: none;
+    }
   }
   @media (min-width: 600px) {
     margin-top: 10rem;
