@@ -6,7 +6,7 @@ import { Facebook, Instagram, Linkedin, OpenIcon, XIcon } from "../Icons/Icons";
 export const Footer = () => {
   return (
     <FooterStyles>
-      <h4>Put your last words here. LOL</h4>
+      <h4>Craft Your Dreams into Reality!</h4>
       <div className="cont">
         <div className="footer-bar">
           <div className="f-links">

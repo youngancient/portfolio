@@ -19,7 +19,6 @@ export const AboutStyles = styled.div`
       font-weight: 400;
       line-height: 1.5rem; /* 133.333% */
       letter-spacing: 0.09375rem;
-      text-transform: capitalize;
     }
   }
   .line1,
