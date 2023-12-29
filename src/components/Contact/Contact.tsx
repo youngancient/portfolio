@@ -16,7 +16,7 @@ export const MarqueeText: React.FC<IText> = ({ text }) => {
 export const Contact = () => {
   const callPhone = () => {
     const phoneNo: string = "+2348149756765";
-    window.location.href = "tel" + phoneNo;
+    window.location.href = "tel:" + phoneNo;
   };
   const sendMail = () => {
     const emailAddress: string = "judetochyokoye@gmail.com";
