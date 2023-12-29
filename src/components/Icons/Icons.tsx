@@ -1,25 +1,58 @@
 import styled from "styled-components";
 
-export const Facebook = () => {
+export const Github = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="33"
-      viewBox="0 0 32 33"
-      fill="none"
-    >
-      <path
-        d="M0 16.5C0 25.3366 7.16344 32.5 16 32.5C24.8366 32.5 32 25.3366 32 16.5C32 7.66344 24.8366 0.5 16 0.5C7.16344 0.5 0 7.66344 0 16.5Z"
-        fill="#27232C"
-      />
-      <path
-        d="M24 16.5C24 12.1 20.4 8.5 16 8.5C11.6 8.5 8 12.1 8 16.5C8 20.5 10.9 23.8 14.7 24.4V18.8H12.7V16.5H14.7V14.7C14.7 12.7 15.9 11.6 17.7 11.6C18.6 11.6 19.5 11.8 19.5 11.8V13.8H18.5C17.5 13.8 17.2 14.4 17.2 15V16.5H19.4L19 18.8H17.1V24.5C21.1 23.9 24 20.5 24 16.5Z"
-        fill="white"
-      />
-    </svg>
+    <GithubStyle>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="17"
+        height="16"
+        viewBox="0 0 17 16"
+        fill="none"
+      >
+        <g clipPath="url(#clip0_237_411)">
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M8.47616 0C4.06555 0 0.5 3.66667 0.5 8.20283C0.5 11.8288 2.78457 14.8982 5.95388 15.9845C6.35012 16.0662 6.49527 15.808 6.49527 15.5908C6.49527 15.4007 6.4822 14.7488 6.4822 14.0697C4.26343 14.5587 3.80139 13.0918 3.80139 13.0918C3.44482 12.1412 2.91649 11.8968 2.91649 11.8968C2.19029 11.3943 2.96939 11.3943 2.96939 11.3943C3.77494 11.4487 4.19763 12.2363 4.19763 12.2363C4.91061 13.4857 6.05951 13.1327 6.52171 12.9153C6.58767 12.3857 6.7991 12.019 7.02359 11.8153C5.25396 11.6252 3.39208 10.919 3.39208 7.76817C3.39208 6.87183 3.70882 6.1385 4.21069 5.56817C4.13151 5.3645 3.85412 4.52233 4.29004 3.39517C4.29004 3.39517 4.96351 3.17783 6.48204 4.23717C7.13218 4.05761 7.80265 3.96627 8.47616 3.9655C9.14963 3.9655 9.83616 4.06067 10.4701 4.23717C11.9888 3.17783 12.6623 3.39517 12.6623 3.39517C13.0982 4.52233 12.8207 5.3645 12.7415 5.56817C13.2566 6.1385 13.5602 6.87183 13.5602 7.76817C13.5602 10.919 11.6984 11.6115 9.91551 11.8153C10.2061 12.0733 10.4569 12.5622 10.4569 13.3363C10.4569 14.4363 10.4438 15.3192 10.4438 15.5907C10.4438 15.808 10.5891 16.0662 10.9852 15.9847C14.1545 14.898 16.4391 11.8288 16.4391 8.20283C16.4522 3.66667 12.8736 0 8.47616 0Z"
+            fill="url(#paint0_linear_237_411)"
+            fillOpacity="0.78"
+          />
+        </g>
+        <defs>
+          <linearGradient
+            id="paint0_linear_237_411"
+            x1="8.46957"
+            y1="0"
+            x2="8.46957"
+            y2="21.612"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
+          </linearGradient>
+          <clipPath id="clip0_237_411">
+            <rect
+              width="16"
+              height="16"
+              fill="white"
+              transform="translate(0.5)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </GithubStyle>
   );
 };
+export const GithubStyle = styled.div`
+  background: #27232C;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 export const XIcon = () => {
   return (
     <svg
@@ -148,43 +181,43 @@ export const ArrowRight = () => {
 export const Asterik = () => {
   return (
     <AsterikStyle>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="30"
-      viewBox="0 0 30 30"
-      fill="none"
-    >
-      <path
-        d="M12.9931 0.831114L9.88068 1.66509L12.6334 11.9385L3.16801 6.47366L1.57487 9.23306L11.0403 14.6979L0.766862 17.4507L1.60083 20.5631L11.8718 17.811L6.40444 27.2808L9.16537 28.8748L14.6337 19.4035L17.3864 29.6769L20.4989 28.843L17.7461 18.5695L27.218 24.0381L28.8111 21.2787L19.3392 15.8101L29.6127 13.0574L28.7787 9.94495L18.5052 12.6977L23.9698 3.23278L21.2089 1.63875L15.7452 11.1021L12.9931 0.831114Z"
-        fill="url(#paint0_linear_7_1932)"
-        fillOpacity="0.78"
-      />
-      <defs>
-        <linearGradient
-          id="paint0_linear_7_1932"
-          x1="11.4369"
-          y1="1.2481"
-          x2="21.5753"
-          y2="39.085"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="white" />
-          <stop offset="1" stopColor="white" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-    </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        viewBox="0 0 30 30"
+        fill="none"
+      >
+        <path
+          d="M12.9931 0.831114L9.88068 1.66509L12.6334 11.9385L3.16801 6.47366L1.57487 9.23306L11.0403 14.6979L0.766862 17.4507L1.60083 20.5631L11.8718 17.811L6.40444 27.2808L9.16537 28.8748L14.6337 19.4035L17.3864 29.6769L20.4989 28.843L17.7461 18.5695L27.218 24.0381L28.8111 21.2787L19.3392 15.8101L29.6127 13.0574L28.7787 9.94495L18.5052 12.6977L23.9698 3.23278L21.2089 1.63875L15.7452 11.1021L12.9931 0.831114Z"
+          fill="url(#paint0_linear_7_1932)"
+          fillOpacity="0.78"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_7_1932"
+            x1="11.4369"
+            y1="1.2481"
+            x2="21.5753"
+            y2="39.085"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+      </svg>
     </AsterikStyle>
   );
 };
 
 export const AsterikStyle = styled.div`
-  @media (max-width: 767px){
+  @media (max-width: 767px) {
     display: flex;
     justify-content: center;
     align-items: center;
-    svg{
+    svg {
       scale: 0.6;
     }
   }
-`
+`;
