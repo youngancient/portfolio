@@ -1,6 +1,6 @@
 import { HeaderStyle } from "../../styles/Header/style";
 import {
-  Github,
+  HeaderGithubIcon,
   Instagram,
   Linkedin,
   OpenIcon,
@@ -18,7 +18,7 @@ export const Header = () => {
       <div className="for-desktop">
         <a href={githubLink}>
           {/* change this to github icons */}
-          <Github />
+          <HeaderGithubIcon />
         </a>
         <a href={xLink} target="_blank">
           <XIcon />

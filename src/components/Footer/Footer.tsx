@@ -1,7 +1,7 @@
 import { FooterStyles } from "../../styles/Footer/Footer";
 import { NormalText } from "../../styles/Hero/style";
 import { githubLink, linkedinLink, resumeLink, xLink } from "../Header/Header";
-import { DarkInsta, DarkLinkedin, DarkX, Github, OpenIcon} from "../Icons/Icons";
+import { DarkInsta, DarkLinkedin, DarkX, FooterGithubIcon, OpenIcon} from "../Icons/Icons";
 
 export const Footer = () => {
   return (
@@ -10,16 +10,16 @@ export const Footer = () => {
       <div className="cont">
         <div className="footer-bar">
           <div className="f-links">
-            <a href={githubLink}>
-              <Github background="#010101" />
+            <a href={githubLink} target="_blank">
+              <FooterGithubIcon />
             </a>
-            <a href={xLink}>
+            <a href={xLink} target="_blank">
               <DarkX />
             </a>
-            <a href="#">
+            <a href="#" target="_blank">
               <DarkInsta />
             </a>
-            <a href={linkedinLink}>
+            <a href={linkedinLink} target="_blank">
               <DarkLinkedin />
             </a>
           </div>

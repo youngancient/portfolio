@@ -5,6 +5,7 @@ export const ProjectsStyle = styled.div`
   .head {
     p {
       font-weight: 700;
+      font-size: 1.5rem;
     }
     p,
     h1 {
@@ -120,7 +121,7 @@ export const ProjectStyle = styled.div`
       height: 16.25rem;
     }
     h3 {
-      font-size: 1rem;
+      font-size: 1.25rem;
     }
     .one p,
     .one span {
