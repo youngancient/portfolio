@@ -104,7 +104,9 @@ export const ProjectStyle = styled.div`
       text-transform: capitalize;
     }
   }
-  .text-anime,.name, .second{
+  .text-anime,
+  .name,
+  .second {
     overflow: hidden;
   }
   @media (max-width: 998px) {
@@ -113,11 +115,27 @@ export const ProjectStyle = styled.div`
       height: 3.375rem;
     }
     padding: 2.81rem 2.89rem 1.75rem 3.19rem;
-    .one p{
+    .one p {
       margin-bottom: 0.25rem;
+    }
+    .one {
+      width: 100%;
     }
   }
 
+  @media (max-width: 767px) {
+    .first {
+      flex-direction: column;
+      gap: 1.5rem;
+      a {
+        width: 100%;
+      }
+    }
+    .btn {
+      width: 100%;
+      height: 3rem;
+    }
+  }
   @media (max-width: 500px) {
     padding: 0.69rem 0.94rem 0.94rem 0.94rem;
     .second img {
@@ -131,26 +149,25 @@ export const ProjectStyle = styled.div`
       font-size: 1rem;
       line-height: 1.125rem;
     }
-    .one span{
+    .one span {
       margin-top: 0.5rem;
     }
     .btn {
-      width: 7.5625rem;
       width: 100%;
       height: 3rem;
     }
     .btn p {
       font-size: 0.8125rem;
     }
-    .first{
-    flex-direction: column;
-    gap: 1.5rem;
-    a{
-      width: 100%;
-    }
+    .first {
+      flex-direction: column;
+      gap: 1.5rem;
+      a {
+        width: 100%;
+      }
     }
   }
-  
+
   @media (min-width: 998px) {
     padding: 2.81rem 2.89rem 1.75rem 3.19rem;
     .btn {

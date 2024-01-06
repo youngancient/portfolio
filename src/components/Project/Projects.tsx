@@ -48,7 +48,6 @@ export const Project: React.FC<IProject> = ({
 }) => {
   useEffect(() => {
     const cont = document.querySelectorAll(".pj");
-    console.log(cont);
     cont.forEach((item) => {
       // set image initial
       gsap.set(item.querySelectorAll(".second img"), {
