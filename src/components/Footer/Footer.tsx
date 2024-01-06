@@ -6,7 +6,7 @@ import { DarkInsta, DarkLinkedin, DarkX, FooterGithubIcon, OpenIcon} from "../Ic
 export const Footer = () => {
   return (
     <FooterStyles>
-      <h4>Craft Your Dreams into Reality!</h4>
+      <h4 data-animation='header'>Craft Your Dreams into Reality!</h4>
       <div className="cont">
         <div className="footer-bar">
           <div className="f-links">

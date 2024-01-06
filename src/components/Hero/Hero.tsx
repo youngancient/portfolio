@@ -1,59 +1,74 @@
 import gsap from "gsap";
 import { HeroStyles, NormalText } from "../../styles/Hero/style";
 import { Arrowdown } from "../Icons/hero";
-import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+// import { useGSAP } from "@gsap/react";
+import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
+gsap.registerPlugin(ScrollTrigger);
 
 export const Hero = () => {
-  gsap.registerPlugin(ScrollTrigger);
-  const container = useRef(null);
+  const textCont = useRef(null);
   const emoji = useRef(null);
-  useGSAP(
-    () => {
-      gsap.from("h1", {
-        y: 100,
-        ease: "back",
-        delay: 1,
-        duration: 1.8,
-        stagger: {
-          each: 0.05,
-          amount: 0.4,
-        },
-      });
-      gsap.from(".strokes", {
-        y: 500,
-        ease: "back",
-        delay: 1,
-        duration: 1.8,
-        stagger: {
-          each: 0.05,
-          amount: 0.4,
-        },
-      });
-      gsap.from(".arr", {
-        y: 40,
-        duration: 1.5,
-        ease: "power2",
-        repeat: -1,
-        yoyo: true,
-      });
-      gsap.from(emoji.current, {
+
+  useEffect(() => {
+    const textcontEl = textCont.current;
+
+    const mainText = new SplitType(".h h1", {
+      types: "lines",
+    });
+    gsap.fromTo(
+      mainText.lines,
+      { y: 150, rotateZ: "-90deg", opacity: 0 },
+      {
+        y: 0,
+        autoAlpha: 1,
+        opacity: 1,
+        rotateZ: 0,
         scrollTrigger: {
-          trigger: emoji.current,
-          toggleActions: "restart none none none",
+          trigger: textcontEl,
+          start: "top center",
         },
-        x: 300,
-        duration: 2,
-        rotateZ: 360,
-        ease: "back",
-      });
-    },
-    { scope: container }
-  );
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "easeOut",
+      }
+    );
+    //   gsap.set(mainText.lines, {
+    //     opacity: 0,
+    //     yPercent: 100,
+    //     transformStyle: "preserve-3d",
+    // });
+    gsap.from(".strokes", {
+      y: 500,
+      ease: "back",
+      delay: 1,
+      duration: 1.8,
+      stagger: {
+        each: 0.05,
+        amount: 0.4,
+      },
+    });
+    gsap.from(emoji.current, {
+      x: 300,
+      ease: "back",
+      // delay: 1,
+      duration: 1.8,
+      repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(".arr", {
+      y: 40,
+      duration: 1.5,
+      ease: "power2",
+      repeat: -1,
+      yoyo: true,
+    });
+  }, []);
+
   return (
-    <HeroStyles ref={container}>
-      <div className="desktop-img">
+    <HeroStyles className="container">
+      <div className="desktop-img" ref={textCont}>
         <img
           src="/assets/first.svg"
           alt="desktop curve"
@@ -80,19 +95,12 @@ export const Hero = () => {
       <div className="hero-text">
         <div className="down">
           <div className="h">
-            {/* <div className="words">
-              {"I tell stories"
-                .split("")
-                .map((i) =>
-                  i == " " ? (
-                    <Letter space={true} letter={i} />
-                  ) : (
-                    <Letter space={false} letter={i} />
-                  )
-                )}
-            </div> */}
-            <h1>I tell stories</h1>
-            <h1>with code</h1>
+            <h1>
+              I tell stories
+            </h1>
+            <h1>
+              with code
+            </h1>
             <div className="emoji" ref={emoji}>
               <img src="/assets/emoji.svg" className="emoji" alt="emoji" />
             </div>

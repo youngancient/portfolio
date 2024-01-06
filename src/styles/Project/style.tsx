@@ -104,6 +104,9 @@ export const ProjectStyle = styled.div`
       text-transform: capitalize;
     }
   }
+  .text-anime,.name, .second{
+    overflow: hidden;
+  }
   @media (max-width: 998px) {
     .btn {
       width: 10.375rem;
@@ -133,10 +136,18 @@ export const ProjectStyle = styled.div`
     }
     .btn {
       width: 7.5625rem;
+      width: 100%;
       height: 3rem;
     }
     .btn p {
       font-size: 0.8125rem;
+    }
+    .first{
+    flex-direction: column;
+    gap: 1.5rem;
+    a{
+      width: 100%;
+    }
     }
   }
   

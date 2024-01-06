@@ -24,6 +24,9 @@ export const HeroStyles = styled.div`
   flex-direction: row,
   overflow: hidden
   }
+  h1{
+    overflow: hidden;
+  }
   h1, .words {
     color: rgba(255, 255, 255, 0);
     text-align: center;
@@ -55,6 +58,10 @@ export const HeroStyles = styled.div`
   }
   .hero-text {
     position: relative;
+    z-index: 5;
+  }
+  .mobile-img{
+    z-index: 1;
   }
   .vshape {
     position: absolute;
@@ -128,6 +135,7 @@ export const HeroStyles = styled.div`
       display: flex;
       margin-top: 2rem;
       justify-content: right;
+      z-index: 5;
       img {
         scale: 0.75;
         transform: translateX(35%);

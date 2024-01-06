@@ -48,8 +48,8 @@ export const Contact = () => {
             <div className="case">
               <img src="/assets/briefcase.svg" alt="briefcase icon" />
             </div>
-            <h4>Project Dreams? Let's Make Them Real</h4>
-            <p>
+            <h4 data-animation='header'>Project Dreams? Let's Make Them Real</h4>
+            <p data-animation='paragraph'>
               Dreaming of a project? I turn dreams into reality. I bring
               aspirations to life.
             </p>
