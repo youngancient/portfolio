@@ -112,7 +112,6 @@ export const Hero = () => {
                 <Arrowdown />
               </div>
             </a>
-            <NormalText>See How I Tell Them Below</NormalText>
           </div>
         </div>
       </div>
