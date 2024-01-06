@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { HeroStyles, NormalText } from "../../styles/Hero/style";
+import { HeroStyles } from "../../styles/Hero/style";
 import { Arrowdown } from "../Icons/hero";
 // import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
@@ -42,7 +42,7 @@ export const Hero = () => {
     gsap.from(".strokes", {
       y: 500,
       ease: "back",
-      delay: 1,
+      delay: 0.5,
       duration: 1.8,
       stagger: {
         each: 0.05,
@@ -53,7 +53,7 @@ export const Hero = () => {
       x: 300,
       ease: "back",
       // delay: 1,
-      duration: 1.8,
+      duration: 1.5,
       repeat: -1,
       yoyo: true,
     });
