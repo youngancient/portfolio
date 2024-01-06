@@ -23,6 +23,13 @@ export const ProjectList: IProject[] = [
     shortDesc: "1st Runner Up GenZ Techies Hackathon’23",
   },
   {
+    name: "Lookup Countries",
+    href: "https://lookupcountries.netlify.app/",
+    img: "/assets/countries.png",
+    role: "Front-End Developer",
+    shortDesc: "A webapp for looking up countries and their info",
+  },
+  {
     name: "Kimiko",
     href: "https://kimiko.vercel.app/",
     img: "/assets/kimiko.png",
