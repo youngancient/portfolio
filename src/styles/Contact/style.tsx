@@ -66,7 +66,6 @@ export const ContactStyle = styled.div`
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
-    text-transform: capitalize;
     height: 2.8125rem;
     padding: 0rem 0.625rem 0rem 0.625rem;
   }
@@ -78,7 +77,6 @@ export const ContactStyle = styled.div`
     font-style: normal;
     font-weight: 600;
     line-height: 3.5rem; /* 155.556% */
-    text-transform: capitalize;
     margin-top: 1rem;
   }
   .one p {
@@ -93,7 +91,6 @@ export const ContactStyle = styled.div`
     font-weight: 400;
     line-height: 1.5rem; /* 133.333% */
     letter-spacing: 0.09375rem;
-    text-transform: capitalize;
   }
   .two {
     margin-top: 2rem;

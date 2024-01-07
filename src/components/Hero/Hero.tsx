@@ -107,7 +107,7 @@ export const Hero = () => {
           </div>
           <div className="direct">
             <img src="/assets/subtract.svg" alt="" className="vshape" />
-            <a href="#tools" className="">
+            <a href="#about" className="">
               <div className="arr">
                 <Arrowdown />
               </div>

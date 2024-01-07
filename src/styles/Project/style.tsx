@@ -72,7 +72,6 @@ export const ProjectStyle = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 1.5rem; /* 350% */
-    text-transform: capitalize;
   }
   .one p {
     margin-top: 0.75rem;
@@ -101,7 +100,6 @@ export const ProjectStyle = styled.div`
       font-style: normal;
       font-weight: 400;
       line-height: 3.5rem; /* 350% */
-      text-transform: capitalize;
     }
   }
   .text-anime,

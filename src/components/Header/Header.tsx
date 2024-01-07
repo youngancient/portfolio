@@ -16,7 +16,7 @@ export const Header = () => {
   return (
     <HeaderStyle>
       <div className="for-desktop">
-        <a href={githubLink}>
+        <a href={githubLink} target="_blank">
           {/* change this to github icons */}
           <HeaderGithubIcon />
         </a>
