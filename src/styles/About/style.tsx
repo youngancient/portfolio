@@ -33,6 +33,15 @@ export const AboutStyles = styled.div`
   }
   .second {
     margin-top: 3rem;
+    button{
+      z-index: 5;
+      position: relative;
+      font-family: var(--minor-font);
+      border-radius: 4px;
+      margin-top: 0.5rem;
+      width: 100px;
+      height: 2rem;
+    }
   }
   @media (max-width: 600px) {
     margin-top: 12rem;
@@ -74,9 +83,11 @@ export const AboutStyles = styled.div`
     }
     .picture img {
       width: 100%;
+      height: auto;
       border-radius: 0rem 0rem 0.625rem 0.625rem;
     }
   }
+  
   @media (min-width: 998px) {
     .second {
       display: flex;

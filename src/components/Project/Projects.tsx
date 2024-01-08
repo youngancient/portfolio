@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { HeadText, NormalText } from "../../styles/Hero/style";
 import { ProjectStyle, ProjectsStyle } from "../../styles/Project/style";
-import { ArrowRight } from "../Icons/Icons";
+import { ArrowRight, FooterGithubIcon } from "../Icons/Icons";
 import { ProjectList } from "./data";
 import gsap from "gsap";
 import SplitType from "split-type";
@@ -15,6 +15,7 @@ export interface IProject {
   shortDesc: string;
   href: string;
   img: string;
+  github?: string;
 }
 export const Projects = () => {
   return (
@@ -32,6 +33,7 @@ export const Projects = () => {
             img={ele.img}
             role={ele.role}
             shortDesc={ele.shortDesc}
+            github={ele.github}
           />
         ))}
       </div>
@@ -45,6 +47,7 @@ export const Project: React.FC<IProject> = ({
   shortDesc,
   href,
   img,
+  github,
 }) => {
   useEffect(() => {
     const cont = document.querySelectorAll(".pj");
@@ -69,6 +72,8 @@ export const Project: React.FC<IProject> = ({
       });
       gsap.set(line2.lines, { y: 120, opacity: 0 });
 
+      gsap.set(item.querySelectorAll(".github"), { y: 200, opacity: 0 });
+
       IO(item, { threshold: 0.8 }).then(() => {
         gsap.to(item, {
           y: 0,
@@ -77,7 +82,12 @@ export const Project: React.FC<IProject> = ({
           opacity: 1,
         });
         // gsap.set(item.querySelectorAll(".btn button"), { x: 0, opacity: 1,duration: 0.6, });
-
+        gsap.to(item.querySelectorAll(".github"), {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "back",
+        });
         gsap.to(line.chars, {
           y: 0,
           opacity: 1,
@@ -108,7 +118,19 @@ export const Project: React.FC<IProject> = ({
     <ProjectStyle className="pj">
       <div className="first">
         <div className="one">
-          <h3 className="name">{name}</h3>
+          <h3 className="name">
+            {name}{" "}
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github"
+              >
+                <FooterGithubIcon />
+              </a>
+            )}
+          </h3>
           <p className="text-anime">Role: {role}</p>
           <span className="text-anime">{shortDesc}</span>
         </div>

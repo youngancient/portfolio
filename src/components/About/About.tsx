@@ -12,7 +12,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+// add github links to each proj
+//  add read more button to mobile
 export const About = () => {
+  const text =
+    'Armed with a coding toolbox featuring JavaScript, TypeScript, HTML, and CSS, I specialize in frameworks like React.js, Next.js, and Node to bring these stories to life. Beyond the code editor, I am not merely a developer.I am a storyteller who solves problems, tinkers with code, and thrives in hackathons, using the power of code to contribute positively to the ever-evolving narrative of web development. "I tell stories with code," where each line of code is a chapter in the tale of seamless, user-centric digital experiences.';
+  const [showText, setShowText] = useState(false);
   return (
     <AboutStyles id="about">
       <div className="first">
@@ -31,16 +36,13 @@ export const About = () => {
             visually stunning websites and dynamic web applications that
             seamlessly blend aesthetics with functionality. With a steadfast
             commitment to web performance and accessibility, I advocate for
-            digital experiences that captivate and delight users. Armed with a
-            coding toolbox featuring JavaScript, TypeScript, HTML, and CSS, I
-            specialize in frameworks like React.js, Next.js, and Node to bring
-            these stories to life. Beyond the code editor, I am not merely a
-            developer; I am a storyteller who solves problems, tinkers with
-            code, and thrives in hackathons, using the power of code to
-            contribute positively to the ever-evolving narrative of web
-            development. "I tell stories with code," where each line of code is
-            a chapter in the tale of seamless, user-centric digital experiences.
+            digital experiences that captivate and delight users.
+            <br />
+            {showText && text}
           </p>
+          <button type="button" onClick={() => setShowText(!showText)}>
+            {showText ? "Read less" : "Read more"}
+          </button>
         </div>
         <div className="picture">
           <img src="/assets/picture.png" alt="Jude Tochy" />
@@ -88,7 +90,11 @@ export const Skill: React.FC<ISkill> = ({ name, icon, color }) => {
           duration: 1,
           stagger: 0.3,
           ease: "power4",
-          scrollTrigger: { trigger: ".icons", start : "top center", scrub: true },
+          scrollTrigger: {
+            trigger: ".icons",
+            start: "top center",
+            scrub: true,
+          },
         }
       );
     });

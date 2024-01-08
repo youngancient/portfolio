@@ -61,6 +61,16 @@ export const ProjectStyle = styled.div`
     font-weight: 700;
     line-height: 2rem; /* 175% */
     text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    a{
+      margin-left: 0.75rem;
+      margin-top: 0.25rem;
+    }
+    svg{
+      scale: 1.25;
+    }
   }
   .one p,
   .one span {

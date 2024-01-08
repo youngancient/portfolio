@@ -5,7 +5,7 @@ export const ProjectList: IProject[] = [
     name: "PAADC’23",
     href: "https://paadc.com/",
     img: "/assets/paadc.png",
-    role: "Front-End Developer",
+    role: "Co-FrontEnd Developer",
     shortDesc: "Worked on User and Admin dashboards used by 500+ teams",
   },
   {
@@ -14,6 +14,7 @@ export const ProjectList: IProject[] = [
     img: "/assets/getlinked.png",
     role: "Front-End Developer",
     shortDesc: "A Webapp built during a 3 day UI challenge",
+    github : "https://github.com/youngancient/getlinked",
   },
   {
     name: "Residease",
@@ -21,6 +22,7 @@ export const ProjectList: IProject[] = [
     img: "/assets/residease.png",
     role: "Front-End Developer",
     shortDesc: "1st Runner Up GenZ Techies Hackathon’23",
+    github : "https://github.com/youngancient/Residease",
   },
   {
     name: "Lookup Countries",
@@ -28,6 +30,7 @@ export const ProjectList: IProject[] = [
     img: "/assets/countries.png",
     role: "Front-End Developer",
     shortDesc: "A webapp for looking up countries and their info",
+    github : "https://github.com/youngancient/countriesAPI",
   },
   {
     name: "Kimiko",
@@ -35,6 +38,7 @@ export const ProjectList: IProject[] = [
     img: "/assets/kimiko.png",
     role: "Front-End Developer",
     shortDesc: "A MedicalAdherence App built for a hackathon",
+    github : "https://github.com/youngancient/kimiko",
   },
   
 ];
