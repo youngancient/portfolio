@@ -7,7 +7,7 @@ import {
   XIcon,
 } from "../Icons/Icons";
 
-export const resumeLink:string = "https://drive.google.com/file/d/1ek3UOnGgB6JoXbar1JbuhkV03qCOhloD/view?usp=sharing";
+export const resumeLink:string = "https://drive.google.com/file/d/1FiVc6-a0ibYbeH8Bu4-uXW5eHBT5dxSb/view?usp=drive_link";
 export const linkedinLink:string = "https://www.linkedin.com/in/jude-tochy-922492227/";
 export const xLink:string = "https://twitter.com/judetochyx";
 export const githubLink:string = "https://github.com/youngancient";
