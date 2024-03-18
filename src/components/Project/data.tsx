@@ -9,6 +9,13 @@ export const ProjectList: IProject[] = [
     shortDesc: "Worked on User and Admin dashboards used by 500+ teams",
   },
   {
+    name: "Coderina",
+    href: "https://firstng.vercel.app/",
+    img: "/assets/firstNG.JPG",
+    role: "FrontEnd Developer",
+    shortDesc: "Built a highly interactive and modern Landing Page for the event",
+  },
+  {
     name: "GetlinkedAI",
     href: "https://getlinkedhack.vercel.app/",
     img: "/assets/getlinked.png",
