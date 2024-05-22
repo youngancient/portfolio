@@ -9,6 +9,22 @@ export const ProjectList: IProject[] = [
     shortDesc: "Worked on User and Admin dashboards used by 500+ teams",
   },
   {
+    name: "Residease",
+    href: "https://residease.vercel.app/",
+    img: "/assets/residease.png",
+    role: "Front-End Developer",
+    shortDesc: "1st Runner Up GenZ Techies Hackathon’23",
+    github : "https://github.com/youngancient/Residease",
+  },
+  {
+    name: "Xendar",
+    href: "https://xendar.vercel.app/",
+    img: "/assets/xendar.JPG",
+    role: "Front-End Developer",
+    shortDesc: "An E-learning platform for people to start their tech careers.",
+    github : "https://github.com/youngancient/Xendar",
+  },
+  {
     name: "Coderina",
     href: "https://firstng.vercel.app/",
     img: "/assets/firstNG.JPG",
@@ -22,14 +38,6 @@ export const ProjectList: IProject[] = [
     role: "Front-End Developer",
     shortDesc: "A Webapp built during a 3 day UI challenge",
     github : "https://github.com/youngancient/getlinked",
-  },
-  {
-    name: "Residease",
-    href: "https://residease.vercel.app/",
-    img: "/assets/residease.png",
-    role: "Front-End Developer",
-    shortDesc: "1st Runner Up GenZ Techies Hackathon’23",
-    github : "https://github.com/youngancient/Residease",
   },
   {
     name: "Lookup Countries",
