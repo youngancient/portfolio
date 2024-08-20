@@ -46,14 +46,6 @@ export const ProjectList: IProject[] = [
     role: "Front-End Developer",
     shortDesc: "A webapp for looking up countries and their info",
     github : "https://github.com/youngancient/countriesAPI",
-  },
-  {
-    name: "Kimiko",
-    href: "https://kimiko.vercel.app/",
-    img: "/assets/kimiko.png",
-    role: "Front-End Developer",
-    shortDesc: "A MedicalAdherence App built for a hackathon",
-    github : "https://github.com/youngancient/kimiko",
-  },
+  }
   
 ];
