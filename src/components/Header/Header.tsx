@@ -7,7 +7,7 @@ import {
   XIcon,
 } from "../Icons/Icons";
 
-export const resumeLink:string = "https://drive.google.com/file/d/1AXKlf0AQC612YrOPOi7lGQhzAehM8VCV/view?usp=drivesdk";
+export const resumeLink:string = "https://drive.google.com/file/d/1zPUOCtp97gA95JPXwuKK8duOndUqeytH/view?usp=sharing";
 export const linkedinLink:string = "https://www.linkedin.com/in/jude-tochy-922492227/";
 export const xLink:string = "https://twitter.com/judetochyx";
 export const githubLink:string = "https://github.com/youngancient";
@@ -32,10 +32,10 @@ export const Header = () => {
       </div>
       <div className="logo">
         <div className="desktop-logo">
-          <img src="/assets/logo.png" alt="logo" className="" />
+          <img src="/assets/logo.png" alt="desktop-logo" className="" />
         </div>
         <div className="mobile-logo">
-          <img src="/assets/mobile-logo.png" alt="logo" className="" />
+          <img src="/assets/mobile-logo.png" alt="mobile-logo" className="" />
         </div>
       </div>
       <div className="other-links">
