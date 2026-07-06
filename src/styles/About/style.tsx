@@ -43,6 +43,14 @@ export const AboutStyles = styled.div`
       height: 2rem;
     }
   }
+  .picture img {
+    filter: grayscale(100%) contrast(115%);
+    transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  .picture:hover img {
+    filter: grayscale(0%) contrast(100%);
+    transform: scale(1.03);
+  }
   @media (max-width: 600px) {
     margin-top: 12rem;
     padding: 1rem;
@@ -50,8 +58,19 @@ export const AboutStyles = styled.div`
     .line2 {
       top: -8rem;
     }
+    .picture {
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+      border-radius: 0rem 0rem 0.625rem 0.625rem;
+    }
     .picture img {
       width: 100%;
+      height: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
       border-radius: 0rem 0rem 0.625rem 0.625rem;
     }
     .text {
@@ -81,9 +100,19 @@ export const AboutStyles = styled.div`
       padding: 2.63rem 4.81rem 2.5rem 2.5rem;
       border-radius: 0.625rem 0.625rem 0rem 0rem;
     }
+    .picture {
+      width: 100%;
+      max-height: 450px;
+      overflow: hidden;
+      border-radius: 0rem 0rem 0.625rem 0.625rem;
+    }
     .picture img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
       border-radius: 0rem 0rem 0.625rem 0.625rem;
     }
   }
@@ -91,13 +120,27 @@ export const AboutStyles = styled.div`
   @media (min-width: 998px) {
     .second {
       display: flex;
+      align-items: stretch;
     }
     .text {
+      flex: 1;
       padding: 2.63rem 4.81rem 2.5rem 2.5rem;
       border-radius: 0.625rem 0rem 0rem 0.625rem;
     }
+    .picture {
+      flex: 0 0 38%;
+      max-width: 450px;
+      max-height: none;
+      overflow: hidden;
+      border-radius: 0rem 0.625rem 0.625rem 0rem;
+    }
     .picture img {
-      width: auto;
+      width: 100%;
+      height: 100%;
+      max-height: none;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
       border-radius: 0rem 0.625rem 0.625rem 0rem;
     }
   }

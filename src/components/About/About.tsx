@@ -31,7 +31,7 @@ export const About = () => {
         <div className="text">
           <p data-animation="paragraph">
             As a fervent front-end developer, I embark on a journey into
-            front-end excellence, leveraging over 2 years of hands-on experience
+            front-end excellence, leveraging over 3 years of hands-on experience
             to weave compelling stories with code. My passion lies in crafting
             visually stunning websites and dynamic web applications that
             seamlessly blend aesthetics with functionality. With a steadfast
@@ -45,7 +45,7 @@ export const About = () => {
           </button>
         </div>
         <div className="picture">
-          <img src="/assets/picture.png" alt="Jude Tochy" />
+          <img src="/assets/picture.jpg" alt="Jude Tochy" />
         </div>
       </div>
     </AboutStyles>

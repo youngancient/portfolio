@@ -7,10 +7,10 @@ import {
   XIcon,
 } from "../Icons/Icons";
 
-export const resumeLink:string = "https://drive.google.com/file/d/1zPUOCtp97gA95JPXwuKK8duOndUqeytH/view?usp=sharing";
-export const linkedinLink:string = "https://www.linkedin.com/in/jude-tochy-922492227/";
-export const xLink:string = "https://twitter.com/judetochyx";
-export const githubLink:string = "https://github.com/youngancient";
+export const resumeLink: string = "https://docs.google.com/document/d/1nmIyuG7qY_eixoK02Hfv302fKqqp00TGYdWJtrqGCH0/edit?usp=sharing";
+export const linkedinLink: string = "https://www.linkedin.com/in/jude-tochy-922492227/";
+export const xLink: string = "https://twitter.com/judetochyx";
+export const githubLink: string = "https://github.com/youngancient";
 
 export const Header = () => {
   return (

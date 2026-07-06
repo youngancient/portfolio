@@ -8,7 +8,6 @@ export const splitAnimation = () => {
   const H = document.querySelectorAll("[data-animation='header']");
   const P = document.querySelectorAll("[data-animation='paragraph']");
   const paragraphsArray = Array.from(P);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   paragraphsArray.forEach((item) => {
     const line = Splitting({
       target: item,
