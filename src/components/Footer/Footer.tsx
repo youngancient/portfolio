@@ -1,7 +1,7 @@
 import { FooterStyles } from "../../styles/Footer/Footer";
 import { NormalText } from "../../styles/Hero/style";
 import { githubLink, linkedinLink, resumeLink, xLink } from "../Header/Header";
-import { DarkInsta, DarkLinkedin, DarkX, FooterGithubIcon, OpenIcon} from "../Icons/Icons";
+import { DarkLinkedin, DarkX, FooterGithubIcon, OpenIcon} from "../Icons/Icons";
 
 export const Footer = () => {
   return (
@@ -10,16 +10,13 @@ export const Footer = () => {
       <div className="cont">
         <div className="footer-bar">
           <div className="f-links">
-            <a href={githubLink} target="_blank">
+            <a href={githubLink} target="_blank" rel="noopener noreferrer">
               <FooterGithubIcon />
             </a>
-            <a href={xLink} target="_blank">
+            <a href={xLink} target="_blank" rel="noopener noreferrer">
               <DarkX />
             </a>
-            <a href="#" target="_blank">
-              <DarkInsta />
-            </a>
-            <a href={linkedinLink} target="_blank">
+            <a href={linkedinLink} target="_blank" rel="noopener noreferrer">
               <DarkLinkedin />
             </a>
           </div>
@@ -33,7 +30,7 @@ export const Footer = () => {
               <a href="#about">
                 <NormalText>About Me</NormalText>
               </a>
-              <a href={resumeLink} target="_blank" className="resume">
+              <a href={resumeLink} target="_blank" rel="noopener noreferrer" className="resume">
                 <NormalText>Resume</NormalText>
                 <OpenIcon />
               </a>
@@ -46,7 +43,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="copyryt">
-        <NormalText>@2023. All Rights Reserved</NormalText>
+        <NormalText>@{new Date().getFullYear()}. All Rights Reserved</NormalText>
       </div>
     </FooterStyles>
   );

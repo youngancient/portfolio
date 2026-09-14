@@ -89,14 +89,6 @@ export const HeroStyles = styled.div`
       width: 70%;
       position: relative;
     }
-    .emoji {
-      position: absolute;
-      top: 2rem;
-      right: 0;
-      img {
-        scale: 0.75;
-      }
-    }
     .direct {
       margin-top: 4rem;
     }
@@ -105,9 +97,6 @@ export const HeroStyles = styled.div`
     h1 {
       font-size: 5rem;
       line-height: 5.21875rem;
-    }
-    .emoji img {
-      transform: translateX(15%);
     }
   }
   @media (max-width: 600px) {
@@ -130,16 +119,6 @@ export const HeroStyles = styled.div`
     }
     .down {
       margin-top: 5rem;
-    }
-    .emoji {
-      display: flex;
-      margin-top: 2rem;
-      justify-content: right;
-      z-index: 5;
-      img {
-        scale: 0.75;
-        transform: translateX(35%);
-      }
     }
     .direct {
       margin-top: -2rem;

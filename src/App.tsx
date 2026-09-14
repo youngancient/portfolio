@@ -12,7 +12,7 @@ import { splitAnimation } from './animations/text'
 function App() {
   useEffect(() => {
     splitAnimation();
-});
+  }, []);
 
   return (
     <>

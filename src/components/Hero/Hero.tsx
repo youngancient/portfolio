@@ -9,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Hero = () => {
   const textCont = useRef(null);
-  const emoji = useRef(null);
 
   useEffect(() => {
     const textcontEl = textCont.current;
@@ -48,14 +47,6 @@ export const Hero = () => {
         each: 0.05,
         amount: 0.4,
       },
-    });
-    gsap.from(emoji.current, {
-      x: 300,
-      ease: "back",
-      // delay: 1,
-      duration: 1.5,
-      repeat: -1,
-      yoyo: true,
     });
     gsap.from(".arr", {
       y: 40,
@@ -101,9 +92,6 @@ export const Hero = () => {
             <h1>
               with code
             </h1>
-            <div className="emoji" ref={emoji}>
-              <img src="/assets/emoji.svg" className="emoji" alt="emoji" />
-            </div>
           </div>
           <div className="direct">
             <img src="/assets/subtract.svg" alt="" className="vshape" />

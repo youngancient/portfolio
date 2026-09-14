@@ -1,7 +1,6 @@
 import { HeaderStyle } from "../../styles/Header/style";
 import {
   HeaderGithubIcon,
-  Instagram,
   Linkedin,
   OpenIcon,
   XIcon,
@@ -16,33 +15,29 @@ export const Header = () => {
   return (
     <HeaderStyle>
       <div className="for-desktop">
-        <a href={githubLink} target="_blank">
-          {/* change this to github icons */}
+        <a href={githubLink} target="_blank" rel="noopener noreferrer">
           <HeaderGithubIcon />
         </a>
-        <a href={xLink} target="_blank">
+        <a href={xLink} target="_blank" rel="noopener noreferrer">
           <XIcon />
         </a>
-        <a href="#" target="_blank">
-          <Instagram />
-        </a>
-        <a href={linkedinLink} target="_blank">
+        <a href={linkedinLink} target="_blank" rel="noopener noreferrer">
           <Linkedin />
         </a>
       </div>
       <div className="logo">
         <div className="desktop-logo">
-          <img src="/assets/logo.png" alt="desktop-logo" className="" />
+          <img src="/assets/logo.png" alt="YoungAncient logo" className="" />
         </div>
         <div className="mobile-logo">
-          <img src="/assets/mobile-logo.png" alt="mobile-logo" className="" />
+          <img src="/assets/mobile-logo.png" alt="YoungAncient logo" className="" />
         </div>
       </div>
       <div className="other-links">
         <a href="#about">
           <p>About Me</p>
         </a>
-        <a href={resumeLink} target="_blank" className="resume">
+        <a href={resumeLink} target="_blank" rel="noopener noreferrer" className="resume">
           <p>Resume</p> <OpenIcon />
         </a>
       </div>

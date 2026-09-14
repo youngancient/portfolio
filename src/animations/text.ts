@@ -4,6 +4,13 @@ import Splitting from "splitting";
 import { IO } from "./observe";
 gsap.registerPlugin(ScrollTrigger);
 
+// Splitting's bundled types describe a single Result, but calling it with
+// a multi-element target actually returns one Result per element at runtime.
+interface ILineSplitResult {
+  el: Element;
+  words: HTMLElement[];
+}
+
 export const splitAnimation = () => {
   const H = document.querySelectorAll("[data-animation='header']");
   const P = document.querySelectorAll("[data-animation='paragraph']");
@@ -12,14 +19,12 @@ export const splitAnimation = () => {
     const line = Splitting({
       target: item,
       by: "lines",
-    });
-  
-    // @ts-expect-error: Headache wan kee me, but the issue is that forEach isnt a valid type for line
+    }) as unknown as ILineSplitResult[];
+
     line.forEach((splitResult) => {
       const wrappedLines = splitResult.words
         .map(
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (wordsArr:any) => `
+          (wordsArr: HTMLElement) => `
                  <span class="word_wrap">
                        ${wordsArr.outerHTML}
                   </span>`

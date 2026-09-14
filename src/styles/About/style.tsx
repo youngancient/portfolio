@@ -7,6 +7,9 @@ export const AboutStyles = styled.div`
     position: relative;
   }
   .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 0.625rem;
     border: 1px solid #000;
     background: #151515;
@@ -33,15 +36,6 @@ export const AboutStyles = styled.div`
   }
   .second {
     margin-top: 3rem;
-    button{
-      z-index: 5;
-      position: relative;
-      font-family: var(--minor-font);
-      border-radius: 4px;
-      margin-top: 0.5rem;
-      width: 100px;
-      height: 2rem;
-    }
   }
   .picture img {
     filter: grayscale(100%) contrast(115%);

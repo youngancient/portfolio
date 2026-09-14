@@ -2,6 +2,13 @@ import { IProject } from "./Projects";
 
 export const ProjectList: IProject[] = [
   {
+    name: "Lattiss",
+    href: "https://lattiss.xyz",
+    img: "/assets/lattiss.png",
+    role: "Full Stack Developer",
+    shortDesc: "An automated application tracking system",
+  },
+  {
     name: "Zerokoin",
     href: "https://zerokoin.vercel.app/",
     img: "/assets/zerokoin.png",
@@ -21,7 +28,7 @@ export const ProjectList: IProject[] = [
     href: "https://residease.vercel.app/",
     img: "/assets/residease.png",
     role: "Front-End Developer",
-    shortDesc: "1st Runner Up GenZ Techies Hackathon’23",
+    shortDesc: "1st Runner Up GenZ Techies Hackathon '23",
     github: "https://github.com/youngancient/Residease",
   },
   {
@@ -32,20 +39,4 @@ export const ProjectList: IProject[] = [
     shortDesc: "An E-learning platform for people to start their tech careers",
     github: "https://github.com/youngancient/Xendar",
   },
-  {
-    name: "Coderina",
-    href: "https://firstng.vercel.app/",
-    img: "/assets/firstNG.JPG",
-    role: "Front-End Developer",
-    shortDesc: "Built a highly interactive and modern Landing Page for the event",
-  },
-  {
-    name: "GetlinkedAI",
-    href: "https://getlinkedhack.vercel.app/",
-    img: "/assets/getlinked.png",
-    role: "Front-End Developer",
-    shortDesc: "A Webapp built during a 3 day UI challenge",
-    github: "https://github.com/youngancient/getlinked",
-  }
-
 ];
