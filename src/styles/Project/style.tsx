@@ -37,10 +37,14 @@ export const ProjectsStyle = styled.div`
 
 export const ProjectStyle = styled.div`
   border-radius: 1.25rem;
-  border: 1px solid #fff;
+  border: 1px solid var(--border);
+  transition: border-color 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  &:hover {
+    border-color: var(--accent-strong);
+  }
   .first {
     display: flex;
     align-items: center;
@@ -54,7 +58,7 @@ export const ProjectStyle = styled.div`
     }
   }
   h3 {
-    color: #fff;
+    color: var(--text);
     font-family: var(--minor-font);
     font-size: 2rem;
     font-style: normal;
@@ -74,7 +78,7 @@ export const ProjectStyle = styled.div`
   }
   .one p,
   .one span {
-    color: #fff;
+    color: var(--text);
     leading-trim: both;
     text-edge: cap;
     font-family: var(--minor-font);
@@ -88,7 +92,7 @@ export const ProjectStyle = styled.div`
   }
   .one span {
     margin-top: 0.5rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-muted);
   }
   a {
     display: flex;
@@ -96,14 +100,16 @@ export const ProjectStyle = styled.div`
   }
   .btn {
     border-radius: 0.625rem;
-    background: #151515;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: background 0.3s ease, border-color 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.625rem;
     padding: 0.625rem;
     p {
-      color: #fff;
+      color: var(--text);
       text-align: center;
       font-family: var(--minor-font);
       font-size: 1rem;
@@ -111,6 +117,10 @@ export const ProjectStyle = styled.div`
       font-weight: 400;
       line-height: 3.5rem; /* 350% */
     }
+  }
+  .btn:hover {
+    background: var(--accent);
+    border-color: var(--accent-strong);
   }
   .text-anime,
   .name,

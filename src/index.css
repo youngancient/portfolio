@@ -12,11 +12,19 @@
     cursor: pointer;
   }
   :root{
-    --head-font: 'Plus Jakarta Sans Variable', sans-serif;
+    --head-font: 'Fraunces Variable', serif;
     --minor-font: 'Plus Jakarta Sans Variable', sans-serif;
+
+    --bg: #0b0b0a;
+    --surface: #16150f;
+    --text: #f1ede4;
+    --text-muted: rgba(241, 237, 228, 0.62);
+    --border: rgba(241, 237, 228, 0.14);
+    --accent: #2e6f52;
+    --accent-strong: #48a377;
   }
   body{
-    background: #010101;
+    background: var(--bg);
   }
   html,body{
     width: 100%;

@@ -10,7 +10,7 @@ width: 100vw;
     gap: 2.25rem;
     align-items: center;
     a {
-      color: #fff;
+      color: var(--text);
       text-align: center;
       font-family: var(--minor-font);
       font-size: 1.25rem;
@@ -31,7 +31,7 @@ width: 100vw;
       left: 0;
       width: 100%;
       height: 2px; /* Adjust this value to control the thickness of the line */
-      background-color: #fff; /* Adjust this value to set the color of the line */
+      background-color: var(--accent-strong);
       transform: scaleX(0); /* Initially, the line is invisible */
       transform-origin: bottom right;
       transition: transform 0.3s ease-out;

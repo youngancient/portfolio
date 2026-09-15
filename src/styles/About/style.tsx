@@ -11,10 +11,10 @@ export const AboutStyles = styled.div`
     flex-direction: column;
     justify-content: center;
     border-radius: 0.625rem;
-    border: 1px solid #000;
-    background: #151515;
+    border: 1px solid var(--border);
+    background: var(--surface);
     p {
-      color: #fff;
+      color: var(--text);
       font-feature-settings: "clig" off, "liga" off;
       font-family: var(--minor-font);
       font-size: 1.125rem;
@@ -144,7 +144,8 @@ export const SkillcompStyle = styled.div`
   margin-top: 4rem;
   width: 100vw;
   border-radius: 0.625rem;
-  background: #151515;
+  background: var(--surface);
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -187,7 +188,8 @@ export const Line = styled.div`
   width: 2px;
   height: 16.46875rem;
   flex-shrink: 0;
-  background: #d9d9d9;
+  background: var(--accent-strong);
+  opacity: 0.55;
   @media (max-width: 767px) {
     height: 12.6875rem;
   }

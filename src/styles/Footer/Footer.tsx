@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const FooterStyles = styled.footer`
   h4 {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text);
     text-align: center;
     font-feature-settings: "clig" off, "liga" off;
     font-family: var(--head-font);
+    font-optical-sizing: auto;
     font-size: 1.5rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 440;
     line-height: 3.125rem; /* 208.333% */
     letter-spacing: 0.09375rem;
     text-transform: capitalize;
@@ -42,7 +43,7 @@ export const FooterStyles = styled.footer`
     .f-links {
       gap: 1rem;
       padding-left: 1.5rem;
-      background: #151515;
+      background: var(--surface);
       padding-top: 0.5rem;
     }
     .desktop-logo {
@@ -71,7 +72,8 @@ export const FooterStyles = styled.footer`
       align-items: center;
       justify-content: space-evenly;
       border-radius: 1.25rem;
-        background: #151515;
+      background: var(--surface);
+      border: 1px solid var(--border);
     }
     .cont {
       margin-top: 2rem;

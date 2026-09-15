@@ -3,13 +3,17 @@ import styled from "styled-components";
 export const ContactStyle = styled.div`
   overflow: hidden;
   position: relative;
-  background: url(/assets/cta.svg) no-repeat center center;
-  background-size: cover;
+  background: radial-gradient(
+      120% 140% at 50% 0%,
+      rgba(46, 111, 82, 0.35) 0%,
+      rgba(46, 111, 82, 0) 60%
+    ),
+    var(--bg);
   .slant-div {
     height: 42.3565rem;
   }
   p {
-    color: #fff;
+    color: var(--text);
   }
   .interest {
     position: absolute;
@@ -23,7 +27,7 @@ export const ContactStyle = styled.div`
   }
   .interest .inner {
     border-radius: 1.25rem;
-    background: #a4a4a4;
+    background: #ede6d6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +37,7 @@ export const ContactStyle = styled.div`
   }
   .case {
     border-radius: 2.5rem;
-    background: #1f2124;
+    background: var(--accent);
     width: fit-content;
   }
   .one,
@@ -51,16 +55,16 @@ export const ContactStyle = styled.div`
       display: flex;
       align-items: center;
       text-decoration-line: underline;
-      text-decoration-color: #000;
+      text-decoration-color: var(--accent);
       p {
-        color: #000;
+        color: #1a1a17;
       }
     }
   }
   .two .phone {
     border-radius: 0.625rem;
-    background: #1f2124;
-    color: #fff;
+    background: var(--accent);
+    color: var(--text);
     text-align: center;
     font-family: var(--minor-font);
     font-size: 1rem;
@@ -68,21 +72,26 @@ export const ContactStyle = styled.div`
     font-weight: 700;
     height: 2.8125rem;
     padding: 0rem 0.625rem 0rem 0.625rem;
+    transition: background 0.3s ease;
+  }
+  .two .phone:hover {
+    background: var(--accent-strong);
   }
   h4 {
-    color: #000;
+    color: #1a1a17;
     text-align: center;
     font-family: var(--head-font);
+    font-optical-sizing: auto;
     font-size: 2.25rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 3.5rem; /* 155.556% */
     margin-top: 1rem;
   }
   .one p {
     text-align: center;
     margin-top: 0.5rem;
-    color: #000;
+    color: #1a1a17;
     text-align: center;
     font-feature-settings: "clig" off, "liga" off;
     font-family: var(--minor-font);
@@ -168,25 +177,16 @@ export const ContactStyle = styled.div`
 export const MarqueeTextStyle = styled.h3`
   text-align: center;
   font-family: var(--head-font);
+  font-optical-sizing: auto;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 440;
   line-height: 3.9375rem; /* 131.25% */
   display: flex;
   align-items: center;
   gap: 1.06rem;
   padding-right: 1.06rem;
   text-transform: capitalize;
-  background: var(
-    --lol,
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.78) 0%,
-      rgba(255, 255, 255, 0) 135.07%
-    )
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text);
 
   @media (max-width: 600px) {
     font-size: 1rem;

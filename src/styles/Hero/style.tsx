@@ -28,20 +28,19 @@ export const HeroStyles = styled.div`
     overflow: hidden;
   }
   h1, .words {
-    color: rgba(255, 255, 255, 0);
     text-align: center;
     font-family: var(--head-font);
+    font-optical-sizing: auto;
     font-size: 8rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 440;
     line-height: 8.375rem; /* 104.688% */
-    text-transform: capitalize;
     z-index: 5;
     margin: 0 auto;
   }
   h1,
   p {
-    color: #fff;
+    color: var(--text);
   }
   .direct {
     display: flex;
@@ -145,18 +144,12 @@ export const HeroStyles = styled.div`
 export const HeadText = styled.h1`
   text-align: center;
   font-family: var(--head-font);
+  font-optical-sizing: auto;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 440;
   line-height: 8.375rem; /* 104.688% */
   text-transform: capitalize;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.78) 0%,
-    rgba(255, 255, 255, 0) 205.22%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text);
   @media (max-width: 998px) {
     font-size: 6rem;
     line-height: 5.21875rem;
@@ -175,7 +168,7 @@ export const HeadText = styled.h1`
 `;
 
 export const NormalText = styled.p`
-  color: #fff;
+  color: var(--text);
   text-align: center;
   font-family: var(--minor-font);
   font-size: 1.25rem;
