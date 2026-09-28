@@ -1,120 +1,41 @@
-import gsap from "gsap";
 import { HeroStyles } from "../../styles/Hero/style";
-import { Arrowdown } from "../Icons/hero";
-// import { useGSAP } from "@gsap/react";
-import { useEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitType from "split-type";
-gsap.registerPlugin(ScrollTrigger);
+import { Button, Display, Lede } from "../../styles/shared";
+import { ScaleGraph } from "./ScaleGraph";
+
+const credentials = [
+  { strong: "3+ years", rest: "shipping software to production" },
+  { strong: "First Class", rest: "BSc Mathematics, University of Lagos" },
+  { strong: "70+ users", rest: "on Lattiss, my application tracker" },
+];
 
 export const Hero = () => {
-  const textCont = useRef(null);
-
-  useEffect(() => {
-    const textcontEl = textCont.current;
-
-    const mainText = new SplitType(".h h1", {
-      types: "lines",
-    });
-    gsap.fromTo(
-      mainText.lines,
-      { y: 150, rotateZ: "-90deg", opacity: 0 },
-      {
-        y: 0,
-        autoAlpha: 1,
-        opacity: 1,
-        rotateZ: 0,
-        scrollTrigger: {
-          trigger: textcontEl,
-          start: "top center",
-        },
-        stagger: 0.1,
-        duration: 0.6,
-        ease: "easeOut",
-      }
-    );
-    //   gsap.set(mainText.lines, {
-    //     opacity: 0,
-    //     yPercent: 100,
-    //     transformStyle: "preserve-3d",
-    // });
-    gsap.from(".strokes", {
-      y: 500,
-      ease: "back",
-      delay: 0.5,
-      duration: 1.8,
-      stagger: {
-        each: 0.05,
-        amount: 0.4,
-      },
-    });
-    gsap.from(".arr", {
-      y: 40,
-      duration: 1.5,
-      ease: "power2",
-      repeat: -1,
-      yoyo: true,
-    });
-  }, []);
-
   return (
-    <HeroStyles className="container">
-      <div className="desktop-img" ref={textCont}>
-        <img
-          src="/assets/first.svg"
-          alt="desktop curve"
-          className="first-curve mini strokes"
-        />
-        <img
-          src="/assets/second.svg"
-          alt="desktop curve"
-          className="second-curve strokes"
-        />
-      </div>
-      <div className="mobile-img">
-        <img
-          src="/assets/mobile-curve.svg"
-          alt="curve"
-          className="first-curve strokes"
-        />
-        <img
-          src="/assets/mobile-curve.svg"
-          alt="curve"
-          className="second-curve strokes"
-        />
-      </div>
-      <div className="hero-text">
-        <div className="down">
-          <div className="h">
-            <h1>
-              I tell stories
-            </h1>
-            <h1>
-              with code
-            </h1>
-          </div>
-          <div className="direct">
-            <img src="/assets/subtract.svg" alt="" className="vshape" />
-            <a href="#about" className="">
-              <div className="arr">
-                <Arrowdown />
-              </div>
-            </a>
+    <HeroStyles id="top">
+      <div className="inner">
+        <div className="copy">
+          <Display>
+            I build software that lets businesses grow without hiring for every repetitive task.
+          </Display>
+          <Lede>
+            Software engineer working across AI automation, blockchain and web products, from the
+            first version to the one that scales.
+          </Lede>
+          <div className="ctas">
+            <Button href="#work">See the work</Button>
+            <Button href="#contact" $variant="outline">
+              Start a project
+            </Button>
           </div>
         </div>
+        <ScaleGraph />
       </div>
+      <ul className="credentials">
+        {credentials.map((c) => (
+          <li key={c.strong}>
+            <strong>{c.strong}</strong> {c.rest}
+          </li>
+        ))}
+      </ul>
     </HeroStyles>
-  );
-};
-
-interface ILetter {
-  space: boolean;
-  letter: string;
-}
-export const Letter: React.FC<ILetter> = ({ space, letter }) => {
-  return space == true ? (
-    <div className="text">&nbsp;</div>
-  ) : (
-    <div className="text">{letter}</div>
   );
 };

@@ -1,49 +1,34 @@
 import { FooterStyles } from "../../styles/Footer/Footer";
-import { NormalText } from "../../styles/Hero/style";
-import { githubLink, linkedinLink, resumeLink, xLink } from "../Header/Header";
-import { DarkLinkedin, DarkX, FooterGithubIcon, OpenIcon} from "../Icons/Icons";
+import { githubLink, linkedinLink, xLink } from "../Header/Header";
 
 export const Footer = () => {
   return (
     <FooterStyles>
-      <h4 data-animation='header'>Craft Your Dreams into Reality!</h4>
-      <div className="cont">
-        <div className="footer-bar">
-          <div className="f-links">
+      <div className="inner">
+        <ul className="social">
+          <li>
             <a href={githubLink} target="_blank" rel="noopener noreferrer">
-              <FooterGithubIcon />
+              GitHub
             </a>
+          </li>
+          <li>
             <a href={xLink} target="_blank" rel="noopener noreferrer">
-              <DarkX />
+              X
             </a>
+          </li>
+          <li>
             <a href={linkedinLink} target="_blank" rel="noopener noreferrer">
-              <DarkLinkedin />
+              LinkedIn
             </a>
-          </div>
-          <div className="logo">
-            <div className="desktop-logo">
-              <img src="/assets/mobile-logo.png" alt="logo" className="" />
-            </div>
-          </div>
-          <div className="x">
-            <div className="other-links">
-              <a href="#about">
-                <NormalText>About Me</NormalText>
-              </a>
-              <a href={resumeLink} target="_blank" rel="noopener noreferrer" className="resume">
-                <NormalText>Resume</NormalText>
-                <OpenIcon />
-              </a>
-            </div>
-
-            <div className="mobile-logo">
-              <img src="/assets/mobile-logo.png" alt="logo" className="" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="copyryt">
-        <NormalText>@{new Date().getFullYear()}. All Rights Reserved</NormalText>
+          </li>
+        </ul>
+        <p>© {new Date().getFullYear()} Jude Tochy</p>
+        <a href="#top" className="top">
+          Back to top
+        </a>
+        <span className="qed" aria-hidden="true">
+          ∎
+        </span>
       </div>
     </FooterStyles>
   );

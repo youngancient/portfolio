@@ -1,36 +1,94 @@
-*{
-    margin: 0;
-    box-sizing: border-box;                            
-  }
-  
-  a{
-    text-decoration: none;
-  }
-  button{
-    outline: 0;
-    border: 0;
-    cursor: pointer;
-  }
-  :root{
-    --head-font: 'Fraunces Variable', serif;
-    --minor-font: 'Plus Jakarta Sans Variable', sans-serif;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    --bg: #0b0b0a;
-    --surface: #16150f;
-    --text: #f1ede4;
-    --text-muted: rgba(241, 237, 228, 0.62);
-    --border: rgba(241, 237, 228, 0.14);
-    --accent: #2e6f52;
-    --accent-strong: #48a377;
+:root {
+  --paper: #f3f4ef;
+  --paper-dim: #e6e7e0;
+  --grid: #dadcd3;
+  --ink: #000000;
+  --graphite: #55574f;
+  --highlighter: #c6ff00;
+
+  --display: "Bricolage Grotesque Variable", "Arial Narrow", sans-serif;
+  --math: "STIX Two Text Variable", "Times New Roman", serif;
+
+  --rule-w: 3px;
+  --rule: var(--rule-w) solid var(--ink);
+  --gutter: clamp(16px, 4vw, 48px);
+  --max: 1440px;
+
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 1.125rem;
+  line-height: 1.55;
+  font-variation-settings: "opsz" 14;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--highlighter);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-  body{
-    background: var(--bg);
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
-  html,body{
-    width: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
-  img{
-    object-fit: cover;
-  }
+}

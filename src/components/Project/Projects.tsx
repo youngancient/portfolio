@@ -1,142 +1,147 @@
-import { useEffect, useRef } from "react";
-import { HeadText, NormalText } from "../../styles/Hero/style";
-import { ProjectStyle, ProjectsStyle } from "../../styles/Project/style";
-import { ArrowRight, FooterGithubIcon } from "../Icons/Icons";
-import { ProjectList } from "./data";
-import gsap from "gsap";
-import SplitType from "split-type";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { IO } from "../../animations/observe";
-gsap.registerPlugin(ScrollTrigger);
+import { useState } from "react";
+import { Highlight, Section, SectionTitle, TextLink } from "../../styles/shared";
+import { FilterBar, Ledger, OpenSource } from "../../styles/Project/style";
+import { Contributions, Domain, IProject, ProjectList, domainLabels } from "./data";
+import { DemoPlayer } from "./DemoPlayer";
 
-export interface IProject {
-  name: string;
-  role: string;
-  shortDesc: string;
-  href: string;
-  img: string;
-  github?: string;
-}
-export const Projects = () => {
+export type Filter = Domain | "all";
+
+const filters: Filter[] = ["all", "ai", "web3", "web2"];
+
+const Result = ({ text, mark }: { text: string; mark?: string }) => {
+  if (!mark || !text.includes(mark)) return <>{text}</>;
+  const [before, after] = text.split(mark);
   return (
-    <ProjectsStyle>
-      <div className="head">
-        <NormalText data-animation="header">MY WORKS</NormalText>
-        <HeadText as="h2" data-animation="header">From the Kitchen</HeadText>
-      </div>
-      <div className="project-list">
-        {ProjectList.map((ele, index) => (
-          <Project
-            key={index}
-            name={ele.name}
-            href={ele.href}
-            img={ele.img}
-            role={ele.role}
-            shortDesc={ele.shortDesc}
-            github={ele.github}
-          />
-        ))}
-      </div>
-    </ProjectsStyle>
+    <>
+      {before}
+      <Highlight>{mark}</Highlight>
+      {after}
+    </>
   );
 };
 
-export const Project: React.FC<IProject> = ({
-  name,
-  role,
-  shortDesc,
-  href,
-  img,
-  github,
-}) => {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const item = ref.current;
-    if (!item) return;
+const yearLabel = (p: IProject) => (p.status === "in-progress" ? "In progress" : p.year);
 
-    gsap.set(item.querySelectorAll(".second img"), {
-      y: 100,
-      opacity: 0,
-    });
-    gsap.set(item, { scale: 0.9, opacity: 0 });
+interface Props {
+  filter: Filter;
+  onFilter: (f: Filter) => void;
+}
 
-    const line = new SplitType(item.querySelectorAll(".name"), {
-      types: "chars",
-    });
-    gsap.set(line.chars, { y: 120, opacity: 0 });
-
-    const line2 = new SplitType(item.querySelectorAll(".text-anime"), {
-      types: "lines",
-    });
-    gsap.set(line2.lines, { y: 120, opacity: 0 });
-
-    gsap.set(item.querySelectorAll(".github"), { y: 200, opacity: 0 });
-
-    IO(item, { threshold: 0.8 }).then(() => {
-      gsap.to(item, {
-        y: 0,
-        scale: 1,
-        duration: 0.5,
-        opacity: 1,
-      });
-      gsap.to(item.querySelectorAll(".github"), {
-        opacity: 1,
-        y: 0,
-        duration: 0.5,
-        ease: "back",
-      });
-      gsap.to(line.chars, {
-        y: 0,
-        opacity: 1,
-        duration: 0.5,
-      });
-      gsap.to(line2.lines, {
-        y: 0,
-        duration: 0.5,
-        opacity: 1,
-      });
-
-      gsap.to(item.querySelectorAll(".second img"), {
-        y: 0,
-        autoAlpha: 1,
-        duration: 0.6,
-        opacity: 1,
-      });
-    });
-  }, []);
+export const Projects = ({ filter, onFilter }: Props) => {
+  const [open, setOpen] = useState<string | null>(null);
+  const visible = ProjectList.filter((p) => filter === "all" || p.domains.includes(filter));
 
   return (
-    <ProjectStyle className="pj" ref={ref}>
-      <div className="first">
-        <div className="one">
-          <h3 className="name">
-            {name}{" "}
-            {github && (
-              <a
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="github"
+    <Section id="work" aria-labelledby="work-title">
+      <div className="inner">
+        <SectionTitle id="work-title">Work</SectionTitle>
+
+        <FilterBar role="group" aria-label="Filter projects">
+          {filters.map((f) => {
+            const count =
+              f === "all" ? ProjectList.length : ProjectList.filter((p) => p.domains.includes(f)).length;
+            return (
+              <button
+                key={f}
+                type="button"
+                aria-pressed={filter === f}
+                onClick={() => {
+                  onFilter(f);
+                  setOpen(null);
+                }}
               >
-                <FooterGithubIcon />
-              </a>
-            )}
-          </h3>
-          <p className="text-anime">Role: {role}</p>
-          <span className="text-anime">{shortDesc}</span>
-        </div>
-        <a href={href} target="_blank" rel="noopener noreferrer">
-          <button type="button" className="btn">
-            <p>Visit Site</p>
-            <ArrowRight />
-          </button>
-        </a>
+                {f === "all" ? "All" : domainLabels[f]} <span className="count">{count}</span>
+              </button>
+            );
+          })}
+        </FilterBar>
+
+        <Ledger>
+          {visible.map((p) => {
+            const isOpen = open === p.slug;
+            const panelId = `panel-${p.slug}`;
+            return (
+              <li key={p.slug} className={isOpen ? "row open" : "row"}>
+                  <h3>
+                    <button
+                      type="button"
+                      aria-expanded={isOpen}
+                      aria-controls={panelId}
+                      onClick={() => setOpen(isOpen ? null : p.slug)}
+                    >
+                      <span className="name">
+                        {p.name}
+                        <span className="kind">{p.kind}</span>
+                      </span>
+                      <span className="result">
+                        <Result text={p.result} mark={p.mark} />
+                      </span>
+                      <span className="domains">
+                        {p.domains.map((d) => domainLabels[d]).join(", ")}
+                      </span>
+                      <span className="year">{yearLabel(p)}</span>
+                      <span className="toggle" aria-hidden="true">
+                        {isOpen ? "−" : "+"}
+                      </span>
+                    </button>
+                  </h3>
+                  {isOpen && (
+                    <div className="panel" id={panelId}>
+                      <DemoPlayer project={p} />
+                      <div className="details">
+                        {p.problem && <p className="problem">{p.problem}</p>}
+                        <dl>
+                          <dt>Role</dt>
+                          <dd>{p.role}</dd>
+                          <dt>Stack</dt>
+                          <dd>{p.stack.join(", ")}</dd>
+                        </dl>
+                        {p.notes && (
+                          <ul className="notes">
+                            {p.notes.map((n) => (
+                              <li key={n}>{n}</li>
+                            ))}
+                          </ul>
+                        )}
+                        <div className="links">
+                          {p.href && p.status === "live" && (
+                            <TextLink href={p.href} target="_blank" rel="noopener noreferrer">
+                              Visit site
+                            </TextLink>
+                          )}
+                          {p.github && (
+                            <TextLink href={p.github} target="_blank" rel="noopener noreferrer">
+                              Source code
+                            </TextLink>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+              </li>
+            );
+          })}
+        </Ledger>
+
+        {(filter === "all" || filter === "web3") && (
+          <OpenSource aria-labelledby="oss-title">
+            <h3 id="oss-title">Open source, Rootstock</h3>
+            <ul>
+              {Contributions.map((c) => (
+                <li key={c.href}>
+                  <a href={c.href} target="_blank" rel="noopener noreferrer">
+                    <span className="repo">
+                      {c.repo} <span className="pr">#{c.pr}, merged</span>
+                    </span>
+                    <span className="summary">{c.summary}</span>
+                    <span className="size">{c.size}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </OpenSource>
+        )}
       </div>
-      <a href={href} target="_blank" rel="noopener noreferrer">
-        <div className="second">
-          <img src={img} alt={name} data-animation="img" />
-        </div>
-      </a>
-    </ProjectStyle>
+    </Section>
   );
 };

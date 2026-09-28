@@ -1,73 +1,94 @@
 import styled from "styled-components";
+import { bp } from "../breakpoints";
 
 export const HeaderStyle = styled.header`
-width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  .other-links {
-    display: flex;
-    gap: 2.25rem;
-    align-items: center;
-    a {
-      color: var(--text);
-      text-align: center;
-      font-family: var(--minor-font);
-      font-size: 1.25rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 3.5rem; /* 280% */
-      text-transform: capitalize;
-    }
-    p {
-      // text-decoration: underline;
-      position: relative;
-      display: inline-block;
-    }
-    p::after {
-      content: "";
-      position: absolute;
-      bottom: -5px; /* Adjust this value to control the space under the text */
-      left: 0;
-      width: 100%;
-      height: 2px; /* Adjust this value to control the thickness of the line */
-      background-color: var(--accent-strong);
-      transform: scaleX(0); /* Initially, the line is invisible */
-      transform-origin: bottom right;
-      transition: transform 0.3s ease-out;
-    }
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--paper);
+  border-bottom: var(--rule);
 
-    p:hover::after {
-      transform: scaleX(1); /* When hovered, the line becomes visible */
-      transform-origin: bottom left;
-    }
-  }
-  .for-desktop {
-    display: flex;
-    gap: 1rem;
-  }
-  .resume {
+  .bar {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    height: 64px;
     display: flex;
     align-items: center;
-    gap: 0.375rem;
-  }
-  @media (min-width: 600px) {
-    .mobile-logo{
-      display: none;
-    }
-  }
-  @media (max-width: 600px) {
-    padding: 0rem 0rem;
-    padding-right: 1.5rem;
-    .for-desktop {
-        display: none;
-    }
-    a p{
-      font-size: 1rem;
-    }
     justify-content: space-between;
   }
-  .mobile-logo{
+  .name {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 800;
+    font-stretch: 80%;
+    font-size: 1.375rem;
+    letter-spacing: -0.02em;
+  }
+  .desktop {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    a {
+      display: flex;
+      align-items: center;
+      padding: 0 1.25rem;
+      font-weight: 600;
+      border-left: var(--rule);
+      transition: background 120ms ease, color 120ms ease;
+      &:hover {
+        background: var(--ink);
+        color: var(--paper);
+      }
+    }
+    .resume {
+      background: var(--ink);
+      color: var(--paper);
+      margin-right: calc(var(--gutter) * -1);
+      padding: 0 var(--gutter) 0 1.5rem;
+      &:hover {
+        background: var(--highlighter);
+        color: var(--ink);
+      }
+    }
+  }
+  .menu-btn {
     display: none;
+    font-weight: 700;
+    border: var(--rule);
+    padding: 0.35rem 0.9rem;
+  }
+  @media ${bp.sm} {
+    .desktop {
+      display: none;
+    }
+    .menu-btn {
+      display: block;
+    }
+  }
+`;
+
+export const MenuSheet = styled.div`
+  position: fixed;
+  inset: 64px 0 0 0;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 2rem var(--gutter);
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    font-weight: 800;
+    font-stretch: 78%;
+    font-size: clamp(3rem, 16vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    padding: 0.25rem 0;
+    border-bottom: 3px solid var(--paper);
+  }
+  a:focus-visible {
+    outline-color: var(--paper);
   }
 `;

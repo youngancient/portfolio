@@ -1,92 +1,51 @@
 import styled from "styled-components";
+import { bp } from "../breakpoints";
 
 export const FooterStyles = styled.footer`
-  h4 {
-    color: var(--text);
-    text-align: center;
-    font-feature-settings: "clig" off, "liga" off;
-    font-family: var(--head-font);
-    font-optical-sizing: auto;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 440;
-    line-height: 3.125rem; /* 208.333% */
-    letter-spacing: 0.09375rem;
-    text-transform: capitalize;
+  border-top: var(--rule);
+  .inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 1.25rem var(--gutter);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 0.9375rem;
   }
-  .copyryt {
-    p {
-      text-align: left;
-    }
-  }
-  .f-links {
+  .social {
     display: flex;
     gap: 1.5rem;
-  }
-  .other-links {
-    display: flex;
-    gap: 2.25rem;
-    align-items: center;
-  }
-  .resume p {
-    text-decoration: underline;
-  }
-  .resume {
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-  }
-  @media (max-width: 600px) {
-    h4 {
-      font-size: 1rem;
-    }
-    .f-links {
-      gap: 1rem;
-      padding-left: 1.5rem;
-      background: var(--surface);
-      padding-top: 0.5rem;
-    }
-    .desktop-logo {
-      display: none;
-    }
-    .footer-bar {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-    .x {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      padding: 0rem 1.5rem 0rem 0.5rem;
-    }
-    .copyryt {
-      padding: 2rem 0rem 2rem 2rem;
+    font-weight: 700;
+    a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.2em;
     }
   }
-  @media (min-width: 600px) {
-    .mobile-logo {
-      display: none;
-    }
-    .footer-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      border-radius: 1.25rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-    }
-    .cont {
-      margin-top: 2rem;
-      padding: 0rem 4.125rem 0rem 4.125rem;
-    }
-    .copyryt {
-      padding-bottom: 3rem;
-    }
-    .copyryt p {
-      text-align: center;
+  p {
+    color: var(--graphite);
+  }
+  .top {
+    margin-left: auto;
+    font-weight: 700;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.2em;
     }
   }
-  @media (min-width: 998px) {
-    margin-top: 4rem;
+  .qed {
+    font-family: var(--math);
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  @media ${bp.sm} {
+    .inner {
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+    }
+    .top {
+      margin-left: 0;
+    }
   }
 `;
