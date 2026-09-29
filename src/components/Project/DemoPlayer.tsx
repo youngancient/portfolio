@@ -14,10 +14,11 @@ const embedUrl = (p: NonNullable<IProject["demo"]>) =>
 export const DemoPlayer = ({ project }: { project: IProject }) => {
   const { demo, img, name, status } = project;
   const [playing, setPlaying] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     if (!playing) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setPlaying(false);
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && (setPlaying(false), setLoaded(false));
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, [playing]);
@@ -25,7 +26,13 @@ export const DemoPlayer = ({ project }: { project: IProject }) => {
   if (demo && playing) {
     return (
       <FrameStyle>
+        {!loaded && (
+          <p className="loading" role="status">
+            Loading demo…
+          </p>
+        )}
         <iframe
+          onLoad={() => setLoaded(true)}
           src={embedUrl(demo)}
           title={`${name} demo video`}
           allow="autoplay; fullscreen; picture-in-picture"

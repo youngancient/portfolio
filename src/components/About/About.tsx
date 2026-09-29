@@ -18,7 +18,7 @@ export const About = () => {
     <Section id="about" aria-labelledby="about-title">
       <AboutStyles className="inner">
         <figure className="portrait">
-          <img src="/assets/picture.jpg" alt="Jude Tochy" />
+          <img src="/assets/picture.webp" alt="Jude Tochy" width={1000} height={1333} loading="lazy" decoding="async" />
           <figcaption>
             <MathText>Fig. 2.</MathText> Jude Tochy, Lagos.
           </figcaption>

@@ -110,3 +110,13 @@ export const VisuallyHidden = styled.span`
   clip: rect(0 0 0 0);
   white-space: nowrap;
 `;
+
+/** Marker stripe across the lower half of the words, like a pen pass. */
+export const Mark = styled.mark`
+  color: inherit;
+  background: linear-gradient(transparent 55%, var(--highlighter) 55%, var(--highlighter) 92%, transparent 92%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0 0.06em;
+  white-space: nowrap;
+`;

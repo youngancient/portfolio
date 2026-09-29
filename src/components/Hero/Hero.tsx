@@ -1,5 +1,5 @@
 import { HeroStyles } from "../../styles/Hero/style";
-import { Button, Display, Lede } from "../../styles/shared";
+import { Button, Display, Lede, Mark } from "../../styles/shared";
 import { ScaleGraph } from "./ScaleGraph";
 
 const credentials = [
@@ -14,7 +14,7 @@ export const Hero = () => {
       <div className="inner">
         <div className="copy">
           <Display>
-            I build software that lets businesses grow without hiring for every repetitive task.
+            I build software that lets businesses grow <Mark>without hiring</Mark> for every repetitive task.
           </Display>
           <Lede>
             Software engineer working across AI automation, blockchain and web products, from the

@@ -201,6 +201,18 @@ export const FrameStyle = styled.div`
   img {
     object-position: top center;
   }
+  .loading {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--paper);
+    font-weight: 700;
+    pointer-events: none;
+  }
+  iframe {
+    position: relative;
+  }
   .fallback {
     position: absolute;
     inset: 0;

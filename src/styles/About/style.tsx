@@ -12,6 +12,7 @@ export const AboutStyles = styled.div`
     top: 96px;
     img {
       width: 100%;
+      height: auto;
       aspect-ratio: 4 / 5;
       border: var(--rule);
       filter: grayscale(1) contrast(1.08);
