@@ -60,7 +60,7 @@ export const ProjectList: IProject[] = [
     ],
     href: "https://hound.up.railway.app",
     github: "https://github.com/youngancient/hound",
-    // TODO(jude): add the Loom or Drive id, e.g. demo: { provider: "loom", id: "abc123", poster: "/assets/work/hound.jpg", length: "4 min" }
+    demo: { provider: "drive", id: "1MhEZ9Vz76h2IEl_d3ouxUCNBNjUGrhsh", length: "7 min" },
   },
   {
     slug: "flow",
@@ -83,7 +83,7 @@ export const ProjectList: IProject[] = [
     ],
     href: "https://flow99.vercel.app",
     github: "https://github.com/youngancient/flow",
-    // TODO(jude): demo: { provider: "loom" | "drive", id: "", poster: "/assets/work/flow.jpg" }
+    demo: { provider: "drive", id: "1nCMqzJIvYnNTxXOS2TgSQqLZyglpeAOh", length: "8 min" },
   },
   {
     slug: "forge",
@@ -104,7 +104,7 @@ export const ProjectList: IProject[] = [
     ],
     href: "https://forge99.vercel.app",
     github: "https://github.com/youngancient/forge",
-    // TODO(jude): demo
+    demo: { provider: "loom", id: "6bdd20a021b748219f5d693977b1e2d0", length: "5 min" },
   },
   {
     slug: "lattiss",
@@ -158,7 +158,7 @@ export const ProjectList: IProject[] = [
       "Reruns are race-safe: late websocket events can't produce duplicate notifications.",
     ],
     github: "https://github.com/youngancient/ai-operations-reporter",
-    // TODO(jude): demo
+    demo: { provider: "loom", id: "c190d61bd7634fb3b604dc0ab077400e", length: "5 min" },
   },
   {
     slug: "trenchr",

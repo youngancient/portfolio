@@ -205,7 +205,7 @@ export const FrameStyle = styled.div`
     position: absolute;
     inset: 0;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     padding: 1.25rem;
     background-color: var(--paper);
     background-image: linear-gradient(var(--grid) 1px, transparent 1px),
